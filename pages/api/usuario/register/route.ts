@@ -32,6 +32,7 @@ export async function POST(req:Request) {
          return new Response ("No se subio usuario", {status:500})
           
          const token = sign(usuarioGuarr, process.env.TOKEN_SECRET as string);
+         
          const respuesta = {...usuarioGuarr, token};
 
 
